@@ -12,7 +12,6 @@ module.exports = {
         commentSection: BASE_JS + "commentSection.js",
     },
 
-
     plugins: [new MiniCssExtractPlugin({
         // css파일을 css 폴더 내부에 넣기 위해
         filename: "css/styles.css"
