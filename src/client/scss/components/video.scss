@@ -1,0 +1,64 @@
+// video mixin
+.video-mixin {
+    .video-mixin__thumb {
+      height: 140px;
+      border-radius: 7px;
+      width: 100%;
+      background-color: tomato;
+    }
+    .video-mixin__data {
+      padding: 0px 15px;
+      .video-mixin__title {
+        font-size: 18px;
+        display: block;
+        margin-top: 10px;
+      }
+      .video-mixin__meta {
+        margin-top: 5px;
+        font-size: 12px;
+      }
+    }
+  }
+
+// recording
+.total{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .recording{
+    display: grid;
+    justify-self: center;
+    justify-content: center;
+    padding: 15px 0px;
+    border-radius: 5px;
+    border: 1px solid rgba($color: #fff, $alpha: 0.1);
+    width: 400px;
+    span{
+      margin-bottom: 20px;
+    }
+    #preview{
+      width: 360px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    #startBtn{
+      all: unset;
+      padding: 15px 20px;
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: white;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      font-size: 16px;
+      color: black;
+      width: 320px;
+      text-align: center;
+      cursor: pointer;
+  
+      &:hover{
+        transition: all 0.2s ease-in-out;
+        background-color: darkgray;
+        color: white;
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+#videoContainer {
+    width: 100%;  // 부모요소의 전체를 넓이로 씀
+    position: relative;
+    video {
+      width: 100%;  // videocontainer의 전체 넓이 사용
+    }
+    .videoControls {
+      opacity: 0; // 초기에는 투명하게 설정
+      transition: opacity 0.5s ease-in-out; // 투명도 변경을 부드럽게 만듦
+
+      // showing 클래스가 추가된다면
+      &.showing {
+        opacity: 1; // 투명도를 1로 설정하여 보여줌
+      }
+      align-items: center;
+      border-radius: 10px;
+      position: absolute;
+      bottom: 10px;
+      width: 95%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      display: grid;
+      //플레이버튼+시간표시 | 플레이 바 | 볼륨 | 전체화면 아이콘 => 이렇게 4개로 나누어 각자 사이즈 지정
+      grid-template-columns: 1fr 4fr 1fr auto; 
+      gap: 10px;
+      justify-content: space-between;
+      background-color: #0f1117;
+      padding: 10px;
+      left: 0;
+      box-sizing: border-box;
+
+      // 플레이버튼 + 시간표시 관련
+      .videoControls__play {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        // 플레이버튼 관련
+        .videoControls__playBtn {
+          margin: 0px 15px;
+        }
+        // 시간표시 관련
+        .videoControls__time {
+          font-size: 12px;
+        }
+      }
+      // 볼륨 관련
+      .videoControls__volume {
+        display: flex;
+        align-items: center;
+        span {
+          margin-left: 10px;
+          i {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }

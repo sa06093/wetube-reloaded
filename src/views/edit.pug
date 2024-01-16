@@ -1,0 +1,11 @@
+extends base.pug
+
+block content
+    h4 Update Video
+    //- action 값으로 input의 데이터가 이동함
+    //- action의 기본 method는 get
+    form(method="POST")
+        input(name="title", placeholder="Video Title", value=video.title, required)
+        input(name="description" placeholder="Description", type ="text", required, minlength=20, value=video.description)
+        input(name="hashtags" placeholder="Hashtags, separated by comma.", type ="text", required, value=video.hashtags.join())
+        input(value="Save", type="submit")
