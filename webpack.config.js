@@ -1,7 +1,7 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
-const BASE_JS = "./src/client/js/";
+const BASE_JS = "./src/client/JS/";
 
 module.exports = {
     // entry는 우리가 변경하고자 하는 파일
