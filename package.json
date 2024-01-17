@@ -13,7 +13,8 @@
     "build:server": "babel src -d build",
     "build:assets": "webpack --mode=production",
     "dev:server": "nodemon",
-    "dev:assets": "webpack --mode=development -w"
+    "dev:assets": "webpack --mode=development -w",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
